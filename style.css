@@ -1,0 +1,501 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #ACE1AF;
+}
+nav{
+    width: 100%;
+    background-color: #006241;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    gap: 10%;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(-20px);   /* start slightly above */
+    animation: fadeDown 1.5s ease-out forwards;
+}
+header nav a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 23px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    padding: 23px;
+    border-bottom: solid 8px #024931;
+}
+header nav a:hover {
+    background-color: #18453B;
+    color: #ACE1AF;
+    border-bottom: solid 8px #012b1d;
+}
+section{
+    width: 100%;
+}
+section.home {
+    opacity: 0;                 /* start invisible */
+    animation: fadeIn 1s ease-in forwards;
+}
+section.home img{
+    cursor: pointer;
+    border-radius: 50%;
+    width: 25%;
+    margin-top: 12%;
+    margin-left: 14%;
+    border: solid 5px darkgreen;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+section.home{
+    display: flex;
+}
+section.home p{
+    margin-top: 25%;
+    margin-left: 8%;
+    font-family: "Epunda Slab", serif;
+    font-weight: bolder;
+    color: #000000;
+}
+div{
+    width: 100vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    height: auto;
+}
+section.home p.title{
+    font-size: 47px;
+}
+section.home p.level{
+    font-size: 35px;
+    margin-top: 3px;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+section.home p.myP{
+    font-size: 28px;
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+hr{
+    width: 60vmin;
+    border-width: 2px;
+    border-color: green;
+    margin-left: 8%;
+}
+section.skills{
+    margin-top: 2%;
+    display: flex;
+    background-color: #32CD32;
+    flex-direction: column;
+    color: #ffffff;
+}
+section.skills p.mySkills{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    margin-top: 5%;
+    margin-left: 20%;
+    border-bottom: solid 5px #0b8e62;
+    width: 30vmin;
+    padding-bottom: 5px;
+    margin-left: 10%;
+    opacity: 0;
+    animation: fadeDown 1.5s ease-out forwards;
+}
+section.skills div.skillTalk{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    margin-top: 1%;
+    width: 80%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+section.skills div.skillTalk img{
+    width: 30%;
+    cursor: pointer;
+}
+section.skills div.skillTalk img:hover{
+    transform: scale(1.1);
+}
+section.skills div.skillTalk p{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    width: 90vmin;
+    font-weight: bold;
+    margin-left: 5%;
+}
+@keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px); /* start higher */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);     /* end in normal place */
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+section.projects{
+    display: flex;
+    background-color: #239023;
+    flex-direction: column;
+    color: #ffffff;
+}
+section.projects div p.myProjects{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    margin-top: 5%;
+    margin-left: 10%;
+    border-bottom: solid 5px #07402d;
+    width: 40vmin;
+    padding-bottom: 5px;
+    margin-left: 10%;
+    opacity: 0;
+    animation: fadeDown 1.5s ease-out forwards;
+}
+section.projects div.projectTalk{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    margin-top: 1%;
+    width: 80%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+section.projects div.projectTalk p{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    margin-left: 5%;
+    width: 90vmin;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in forwards;
+}
+section.projects div.container{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: auto;
+    margin-top: 5px;
+    margin-left: 35%;
+    animation: fadeIn 1s ease-in forwards;
+}
+section.projects div.container div{
+    box-shadow: 5px 10px 20px black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    margin: 3%;
+    background-color: #0b8e62;
+    cursor: pointer;
+    width: 80%;
+}
+section.projects div.container div a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 23px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    padding: 23px;
+    border-bottom: solid 8px #024931;
+}
+section.projects div.container div a:hover {
+    background-color: #18453B;
+    color: #ACE1AF;
+    border-bottom: solid 8px #012b1d;
+}
+section.projects div.container div.pomodoro img{
+    padding-top: 13px;
+}
+section.projects div.container div.tic img{
+    padding-top: 10px;
+}
+section.projects div.container div:hover{
+    transform: scale(1.1);
+}
+footer{
+    background-color: #0c2e0c;
+    height: 80vh;
+}
+footer div.par{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: large;
+    font-family: sans-serif;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    gap: 12px;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+footer div.par h1{
+    font-size: larger;
+    border-bottom: solid 5px #07730b;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 2%;
+    opacity: 0;
+    animation: fadeDown 1.5s ease-out forwards;
+}
+footer div.par div.social{
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    text-align: center;   
+}
+footer div.par div.social img{
+    width: 30px;
+    cursor: pointer; 
+}
+footer div.par div.social img:hover{
+    transform: scale(1.1);
+}
+footer div.par a{
+    text-decoration: none;
+    color: #239023;
+}
+footer div.par a:hover{
+    color: #1a671a;
+}
+@media screen and (max-width: 1024px){
+    header nav a{
+        padding: 15px;
+        font-weight: 20px;
+    }
+    section.home p.title{
+        font-size: 35px;
+    }
+    section.home p.level{
+        font-size: 25px;
+    }
+    section.home img{
+        width: 20%;
+    }
+    section.home p.myP{
+        font-size: 15px;
+    }
+    section.skills p.mySkills{
+        font-size: 30px;
+    }
+    section.skills div.skillTalk img{
+        width: 26%;
+    }
+    section.skills div.skillTalk p{
+        font-size: 20px;
+        margin-left: 10%;
+    }
+    section.projects div p.myProjects{
+        font-size: 30px;
+    }
+    section.projects div.projectTalk p{
+        font-size: 20px;
+    }
+    section.projects div.container{
+        width: 26%;
+    }
+    footer div.par{
+        font-size: 15px;
+    }
+    footer div.par h1{
+        font-size: large;
+    }
+    footer div.par div.social img{
+        width: 20px;
+    }
+}
+@media screen and (max-width: 768px){
+    nav{
+        gap: 5%;
+    }
+    header nav a{
+        padding: 15px;
+        font-size: 15px;
+    }
+    section.home{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-content: center;
+    }
+    section.home p.title{
+        margin-top: 3%;
+        font-size: 30px;
+    }
+    section.home p.level{
+        font-size: 20px;
+    }
+    section.home img{
+        margin-top: 10%;
+        width: 30%;
+    }
+    section.home p.myP{
+        font-size: 10px;
+    }
+    section.skills p.mySkills{
+        font-size: 20px;
+        width: 15%;
+    }
+    section.skills div.skillTalk img{
+        width: 23%;
+    }
+    section.skills div.skillTalk p{
+        font-size: 13px;
+        margin-left: 10%;
+    }
+    section.projects div p.myProjects{
+        font-size: 20px;
+        width: 20%;
+    }
+    section.projects div.projectTalk p{
+        font-size: 13px;
+        margin-left: 10%;
+    }
+    section.projects div.container{
+        width: 35%;
+    }
+    section.projects div.container div a{
+        font-size: 15px;
+    }
+    footer div.par{
+        font-size: 13px;
+    }
+    footer div.par h1{
+        font-size: 15px;
+    }
+    footer div.par div.social img{
+        width: 15px;
+    }
+}
+@media screen and (max-width: 426px){
+    nav{
+        gap: 0.3%;
+    }
+    header nav a{
+        font-size: 13px;
+        padding: 5%;
+        border-bottom: solid 3px #024931;
+    }
+    header nav a:hover {
+        border-bottom: solid 3px #012b1d;
+    }
+    section.home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    section.home img{
+        width: 50%;
+        margin-top: 20%;
+        border: solid 2px darkgreen;
+        margin-right: 15%;
+    }
+    section.home p.title{
+        font-size: 30px;
+        margin-right: 10%;
+    }
+    section.home p.level{
+        font-size: 20px;
+        margin-right: 10%;
+    }
+    section.home p.myP{
+        font-size: 12px;
+        margin-right: 10%;
+    }
+    hr{
+        width: 80vmin;
+    }
+    section.skills{
+        justify-content: center;
+        align-items: center;
+    }
+    section.skills p.mySkills{
+        font-size: 20px;
+        border-bottom: solid 3px #0b8e62;
+        width: 30vmin;
+        margin-left: 35%;
+        text-align: center;
+    }
+    section.skills div.skillTalk{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-right: 10%;
+    }
+    section.skills div.skillTalk img{
+        width: 40%;
+        margin-left: 35%;
+    }
+    section.skills div.skillTalk p{
+        font-size: 10px;
+        text-align: center;
+    }
+    section.projects{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    section.projects div p.myProjects{
+        border-bottom: solid 3px #07402d;
+        font-size: 20px;
+        width: 40vmin;
+        margin-left: 30%;
+        text-align: center;
+    }
+    section.projects div.projectTalk{
+        width: 100%;
+        margin-right: 20%;
+    }
+    section.projects div.projectTalk p{
+        font-size: 10px;
+        text-align: center;
+        margin-right: 30%;
+        width: 100vmin;
+    }
+    section.projects div.container{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-left: 8%;
+        margin-bottom: 1px;
+    }
+    section.projects div.container div a{
+        font-size: 13px;
+    }
+    section.projects div.container div a:hover {
+        border-bottom: solid 3px #012b1d;
+    }
+    footer div.par{
+        padding-top: 10px;
+        font-size: small;
+        gap: 5px;
+    }
+    footer div.par h1{
+        font-size: large;
+        border-bottom: solid 3px #07730b;
+    }
+    footer div.par div.social img{
+        width: 20px;
+    }
+}
